@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Link Light Rail Seattle</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            background-color: #101a9a;
+            color: #40cf8b;
+        }
+
+        body,
+        main,
+        section,
+        div,
+        h1 {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            max-width: max(90vw, 90vh);
+            margin: 5vh auto 0px auto;
+        }
+
+        .number {
+            text-align: center;
+            font-size: 60vmin;
+            line-height: 50vmin;
+        }
+
+        .text {
+            text-align: center;
+            font-size: 19vmin;
+            line-height: 17vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <main id="app">
+        <div class="number">{{count}}</div>
+        <div class="text">{{ message }}</div>
+    </main>
+
+    <script>
+        const {
+            createApp
+        } = Vue
+
+        createApp({
+            data() {
+                const lastAccidentDate = new Date(2022, 4, 19);
+                const difference = Math.floor((Date.now() - lastAccidentDate.getTime()) / 86400000);
+                console.log(difference);
+                return {
+                    count: 0,
+                    expectedCount: difference,
+                    message: 'days since the last Seattle link light rail accident'
+                }
+            },
+            mounted() {
+                this.onPageLoad();
+            },
+            methods: {
+                onPageLoad() {
+                    setTimeout(() => {
+                        let intervalId = setInterval(() => {
+                            if (this.count < this.expectedCount) {
+                                this.count++;
+                            } else {
+                                clearInterval(intervalId);
+                            }
+                        }, 50);
+                    }, 1000);
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
