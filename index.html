@@ -10,22 +10,59 @@
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
-            background-color: #101a9a;
+            background-color: white;
             color: #40cf8b;
         }
 
+        html,
         body,
         main,
         section,
         div,
+        ul,
+        li,
         h1 {
             margin: 0px;
             padding: 0px;
         }
 
-        main {
+        #countdown {
             max-width: max(90vw, 90vh);
-            margin: 5vh auto 0px auto;
+            margin: 0px auto 0px auto;
+            padding: 5vh 0 0 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            background-color: #101a9a;
+        }
+
+        #stations {
+            max-width: 900px;
+            margin: 0 auto 0 auto;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            font-size: 3rem;
+            color: #222222;
+        }
+
+        #stations div {
+            padding-left: 100px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            min-height: 70px;
+            line-height: 70px;
+            vertical-align: middle;
+        }
+
+        #stations div.start {
+            background-image: url('./LineStart.svg');
+        }
+
+        #stations div.end {
+            background-image: url('./LineEnd.svg');
+        }
+
+        #stations div.station {
+            background-image: url('./LineStation.svg');
         }
 
         .number {
@@ -46,8 +83,15 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <main id="app">
-        <div class="number">{{count}}</div>
-        <div class="text">{{ message }}</div>
+        <section id="countdown">
+            <div class="number">{{ count }}</div>
+            <div class="text">{{ message }}</div>
+        </section>
+        <section id="stations">
+            <div class="start">LINE</div>
+            <div class="station" v-for="station in stations" v:key="station">{{ station }}</div>
+            <div class="end"></div>
+        </section>
     </main>
 
     <script>
@@ -63,7 +107,28 @@
                 return {
                     count: 0,
                     expectedCount: difference,
-                    message: 'days since the last Seattle link light rail accident'
+                    message: 'days since the last Seattle link light rail accident',
+                    stations: [
+                        'Northgate',
+                        'Roosevelt',
+                        'U District',
+                        'University of Washington',
+                        'Capitol Hill',
+                        'Westlake',
+                        'University Street',
+                        'Pioneer Square',
+                        'International District/Chinatown',
+                        'Stadium',
+                        'SODO',
+                        'Beacon Hill',
+                        'Mount Baker',
+                        'Columbia City',
+                        'Othello',
+                        'Rainier Beach',
+                        'Tukwila International Blvd',
+                        'SeaTac/Airport',
+                        'Angle Lake',
+                    ],
                 }
             },
             mounted() {
