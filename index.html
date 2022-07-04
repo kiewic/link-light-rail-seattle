@@ -32,12 +32,34 @@
         }
 
         #countdown {
-            max-width: max(90vw, 90vh);
-            margin: 0px auto 0px auto;
-            padding: 5vh 0 0 0;
-            min-width: 100vw;
-            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
             background-color: #101a9a;
+        }
+
+        #countdown div {
+            margin: 10px;
+        }
+
+        #countdown .number {
+            font-size: 17vmin;
+            min-width: 20vw;
+            text-align: right;
+            /* background-color: aquamarine; */
+        }
+
+        #countdown .text .main {
+            font-size: 6vmin;
+        }
+
+        #countdown .text .footnote {
+            font-size: 2vmin;
+        }
+
+        #countdown a {
+            color: #319f6a;
         }
 
         #stations {
@@ -71,18 +93,6 @@
         #stations div.station {
             background-image: url('./LineStation.svg');
         }
-
-        .number {
-            text-align: center;
-            font-size: 60vmin;
-            line-height: 50vmin;
-        }
-
-        .text {
-            text-align: center;
-            font-size: 19vmin;
-            line-height: 17vmin;
-        }
     </style>
 </head>
 
@@ -92,7 +102,10 @@
     <main id="app">
         <section id="countdown">
             <div class="number">{{ count }}</div>
-            <div class="text">{{ message }}</div>
+            <div class="text">
+                <div class="main">{{ message }}</div>
+                <div class="footnote"><a href="https://twitter.com/fbaum/status/1527415680596729856" target="_blank" rel="noreferrer">Read more on Twitter</a></div>
+            </div>
         </section>
         <section id="stations">
             <div class="start">LINE</div>
