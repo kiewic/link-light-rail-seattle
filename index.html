@@ -46,13 +46,13 @@
 
         #countdown .number {
             font-size: 17vmin;
-            min-width: 20vw;
+            min-width: 19vw;
             text-align: right;
             /* background-color: aquamarine; */
         }
 
         #countdown .text .main {
-            font-size: 6vmin;
+            font-size: 4.5vmin;
         }
 
         #countdown .text .footnote {
@@ -119,8 +119,10 @@
             <div class="number">{{ count }}</div>
             <div class="text">
                 <div class="main">{{ message }}</div>
-                <div class="footnote"><a href="https://twitter.com/fbaum/status/1527415680596729856" target="_blank"
+                <div class="footnote"><a href="https://twitter.com/MikeLindblom/status/1559002967163805697" target="_blank"
                     rel="noreferrer">Read more on Twitter</a></div>
+                <div class="footnote"><a href="https://twitter.com/fbaum/status/1527415680596729856" target="_blank"
+                    rel="noreferrer">Previous accident was on 5/19/2022</a></div>
             </div>
         </section>
         <section id="stations">
@@ -137,7 +139,7 @@
 
         createApp({
             data() {
-                const lastAccidentDate = new Date(2022, 4, 19);
+                const lastAccidentDate = new Date(2022, 7, 14);
                 const difference = Math.floor((Date.now() - lastAccidentDate.getTime()) / 86400000);
                 console.log(difference);
                 return {
