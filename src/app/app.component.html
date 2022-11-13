@@ -1,0 +1,17 @@
+<main id="app">
+  <section id="countdown">
+    <div class="number">{{ count }}</div>
+    <div class="text">
+      <div class="main">{{ message }}</div>
+      <div class="footnote"><a href="https://twitter.com/MikeLindblom/status/1559002967163805697" target="_blank"
+          rel="noreferrer">Read more on Twitter</a></div>
+      <div class="footnote"><a href="https://twitter.com/fbaum/status/1527415680596729856" target="_blank"
+          rel="noreferrer">Previous accident was on 5/19/2022</a></div>
+    </div>
+  </section>
+  <section id="stations">
+    <div class="start">LINE</div>
+    <div class="station" *ngFor="let station of stations">{{ station }}</div>
+    <div class="end"></div>
+  </section>
+</main>
