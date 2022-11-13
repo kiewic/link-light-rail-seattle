@@ -1,0 +1,50 @@
+#countdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #101a9a;
+}
+
+#countdown div {
+  margin: 10px;
+}
+
+#countdown .number {
+  font-size: 17vmin;
+  min-width: 19vw;
+  text-align: right;
+}
+
+#countdown .text .main {
+  font-size: 4.5vmin;
+}
+
+#countdown .text .footnote {
+  font-size: 2vmin;
+}
+
+#countdown a {
+  color: #319f6a;
+}
+
+#references {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+}
+
+#references a {
+  text-decoration: none;
+  color: #333;
+}
+
+#references a:visited {
+  color: grey
+}
+
+#references a:hover, #references a:focus {
+  text-decoration: underline;
+  color: #333;
+}

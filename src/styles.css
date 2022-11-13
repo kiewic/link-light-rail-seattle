@@ -24,67 +24,11 @@ h1 {
     padding: 0px;
 }
 
-#countdown {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    background-color: #101a9a;
+main {
+    background-color: #ffffff;
 }
 
-#countdown div {
-    margin: 10px;
-}
-
-#countdown .number {
-    font-size: 17vmin;
-    min-width: 19vw;
-    text-align: right;
-    /* background-color: aquamarine; */
-}
-
-#countdown .text .main {
-    font-size: 4.5vmin;
-}
-
-#countdown .text .footnote {
-    font-size: 2vmin;
-}
-
-#countdown a {
-    color: #319f6a;
-}
-
-#stations {
-    max-width: 900px;
-    margin: 0 auto 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    font-size: 3rem;
-    color: #222222;
-}
-
-#stations div {
-    padding-left: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-repeat: no-repeat;
-    background-position: left center;
-    vertical-align: middle;
-}
-
-#stations div.start {
-    background-image: url('/assets/LineStart.svg');
-    /* Line dots are 60px */
-    min-height: 60px;
-}
-
-#stations div.end {
-    background-image: url('/assets/LineEnd.svg');
-    /* Line dots are 60px */
-    min-height: 60px;
-}
-
-#stations div.station {
-    background-image: url('/assets/LineStation.svg');
+footer {
+    text-align: center;
+    margin-bottom: 20px;
 }
