@@ -1,3 +1,7 @@
+:host {
+  font-size: 3rem;
+}
+
 #title {
   background-color: #101a9a;
 }
@@ -8,7 +12,6 @@
   margin-left: auto;
   padding: 15px 15px 10px 0px;
   text-align: right;
-  font-size: 3rem;
 }
 
 #stations {
@@ -16,7 +19,6 @@
   margin: 0 auto 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  font-size: 3rem;
   color: #222222;
 }
 
@@ -31,8 +33,8 @@
 
 #stations div.start {
   background-image: url('/assets/LineStart.svg');
-  /* Line dots are 60px */
-  min-height: 60px;
+  min-height: 60px; /* Line dots are 60px */
+  line-height: max(60px, 3rem); /* Max of min-height or font-size */
 }
 
 #stations div.end {
@@ -43,4 +45,15 @@
 
 #stations div.station {
   background-image: url('/assets/LineStation.svg');
+}
+
+/* Portrait */
+@media only screen
+  and (max-device-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+  :host {
+    color: fuchsia;
+    font-size: 2rem;
+  }
 }
