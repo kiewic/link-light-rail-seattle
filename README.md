@@ -6,5 +6,6 @@ This project was generated with:
 
 Run the following command to deploy the website:
 
+    ng build
     firebase deploy
 
