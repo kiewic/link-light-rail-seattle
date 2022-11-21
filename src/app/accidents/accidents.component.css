@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  background-color: #101a9a;
+  color: #222;
 }
 
 #countdown div {
@@ -11,17 +11,13 @@
 }
 
 #countdown .number {
-  font-size: 17vmin;
-  min-width: 19vw;
+  font-size: 10vw;
+  min-width: 14vw;
   text-align: right;
 }
 
-#countdown .text .main {
+#countdown .text {
   font-size: 4.5vmin;
-}
-
-#countdown .text .footnote {
-  font-size: 2vmin;
 }
 
 #countdown a {
@@ -29,7 +25,8 @@
 }
 
 #references {
-  font-size: 2rem;
+  margin: 10px;
+  font-size: 4.5vmin;
 }
 
 #references a {

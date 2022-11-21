@@ -24,6 +24,30 @@ h1 {
     padding: 0px;
 }
 
+header {
+    background-color: #101a9a;
+    font-size: 3rem;
+}
+
+header div {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px 15px 10px 0px;
+    text-align: right;
+}
+
+/* Portrait */
+@media only screen
+  and (max-device-width: 500px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+  header {
+    color: fuchsia;
+    font-size: 2rem;
+  }
+}
+
 main {
     background-color: #ffffff;
 }

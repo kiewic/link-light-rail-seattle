@@ -1,6 +1,3 @@
-<section id="title">
-  <div>Seattle Link Light Rail</div>
-</section>
 <section id="stations" class="width900">
   <div class="start">LINE</div>
   <div class="station" *ngFor="let station of stations"><a [routerLink]="['/station', station]">{{ station }}</a></div>

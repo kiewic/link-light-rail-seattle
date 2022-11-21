@@ -1,0 +1,11 @@
+:host {
+    color: #222222;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+section {
+    margin: 10px;
+}

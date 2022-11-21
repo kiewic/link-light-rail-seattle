@@ -2,18 +2,6 @@
   font-size: 3rem;
 }
 
-#title {
-  background-color: #101a9a;
-}
-
-#title div {
-  max-width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 15px 15px 10px 0px;
-  text-align: right;
-}
-
 #stations {
   padding-top: 60px;
   padding-bottom: 60px;
